@@ -1,0 +1,28 @@
+{% extends 'page1.html' %}
+
+{% block start %}
+
+<div id=nav-bar>
+        <center> <h3>  Update Your Form Here
+            </h3></center>
+       </div>
+       <div id=update-container>
+            <img src="/usman_static/update.jpg" alt="medicine-background" height=100% width=100%>
+       
+<form method="POST" id=add-form style="color:white;">
+        {% csrf_token %}
+        <p>Are You Sure, you want to delete
+            <p> Company Name </p>
+            <i style="font-size:19px">         {{ object.company_name }}?
+                </i>
+
+            </p>
+        <p>
+            <p>Medicine Name</p>
+            <i style="font-size:19px">
+            {{ object.medicine }}   </i>
+        </p>
+        <input type="submit" value="Delete" id=deleted>
+    </form>
+       </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'page1.html' %}
+
+{% block start %}
+<form action="/accounts/login/" method=POST id='login-admin'>
+    {% csrf_token %}
+    {{ form }}
+    <center>
+    <input type="submit" value="login" name=login>
+</center>
+</form>
+<div id=mainappcontainer>
+       
+        <img src="/usman_static/medicine.jpg" alt="medicine-background" height=100% width=120%>
+        <div id=nav-bar>
+                <center> <h3>  <strong>"</strong> Welcome To Your Pharmacy  <strong>"</strong> 
+                    </h3></center>
+                </div>
+        
+        <div id=slogan>We know you better
+        </div>
+    </div>
+{% endblock %}

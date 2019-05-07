@@ -1,0 +1,16 @@
+{% extends 'page1.html' %}
+{% block start %}
+<div id=nav-bar>
+        <center> <h3>  Update Your Form Here
+            </h3></center>
+       </div>
+       <div id=update-container>
+            <img src="/usman_static/update.jpg" alt="medicine-background" height=100% width=100%>
+       
+            <form method="post" id=add-form>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Update">
+                </form>
+       </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'page1.html' %}
+{% block start %}
+   <div id=nav-bar>
+            <center> <h3>  <strong>"</strong> Welcome To Your Pharmacy  <strong>"</strong> 
+                </h3></center>
+                <form action="/accounts/logout/" method=post id=logout>
+                        {% csrf_token %}
+                        <input type="submit" value="Logout" name=logout>
+                        </form>
+                <a href="{% url 'stocks-app:add-stock' %}" id=a1>Add Stocks Here </a>
+                <a href="{% url 'stocks-app:show-user' %}" id=a2>Show User Transaction</a>                
+           
+        </div>
+            
+            <div id=detail-table>
+                        <img src="/usman_static/images2.jpg" alt="medicine-background" height=100% width=100%>
+       
+<table>
+        <tr>   
+                <th>Comapny</th>
+                <th>Medicine</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Update</th>
+                <th>Delete</th>
+        </tr>
+{% for i in sd_d %}
+                    <tr>
+                            <td>{{ i.company_name }}</td>
+                            <td>{{ i.medicine }}</td>
+                            <td>{{ i.price }}</td>
+                            <td>{{ i.quantity }}</td>
+                            <td class=ud><a href="{% url 'stocks-app:update_stock' i.id %}"  > Update</a></td>
+                            <td class=ud><a href="{% url 'stocks-app:delete_stock' i.id %}"  >Delete</a></td>
+                    </tr>
+                
+{% endfor %}
+</table>
+</div>
+{% endblock %}

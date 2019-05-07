@@ -1,0 +1,72 @@
+{% extends 'page1.html' %}
+
+{% block start %}
+<div id=nav-bar>
+        <center> <h3>  <strong>"</strong> Welcome To Your Pharmacy  <strong>"</strong> 
+            </h3></center>
+        </div>
+<div id=mainappcontainer>
+        <div id=nav-bar>
+                <center> <h3>  <strong>"</strong> Welcome To Your Pharmacy  <strong>"</strong> 
+                    </h3></center>
+                </div>
+       
+        <div id=detail-table>
+                <img src="/usman_static/images2.jpg" alt="medicine-background" height=100% width=100%>
+
+<table>
+<tr>   
+        <th>Comapny</th>
+        <th>Medicine</th>
+        <th>Price</th>
+        <th>Quantity</th>
+</tr>
+{% for i in forma %}
+            <tr>
+                    <td>{{ i.company_name }}</td>
+                    <td>{{ i.medicine }}</td>
+                    <td>{{ i.price }}</td>
+                    <td>{{ i.quantity }}</td>
+            </tr>
+        
+{% endfor %}
+</table>
+</div>
+<div id=chome>
+<form action="/customers/save" method=POST id=add-form2>
+    {% csrf_token %}
+    {{ cdata.name }}
+    <select name="medi">
+    {% for m in forma %}
+    
+        <option class=selector value="{{ m.medicine }}">{{ m.medicine }}</option>
+   
+    {% endfor %} </select>
+    
+    {{ cdata.qty }}
+<input type="submit" value="buy">
+
+</form>
+</div>
+<div  >
+    {% if context %}
+    <p>
+            your name: 
+            {{ context.name }}
+            </p>
+             <p>
+                    Medicine: 
+                    {{ context.medi }}
+                    </p>
+                    <p>
+                            quantity: 
+                            {{ context.qty }}
+                            </p>
+                            <p>
+                                    Total: 
+                                    {{ context.price }}
+                                    </p>
+
+</div>
+{% endif %}
+{% endblock %}

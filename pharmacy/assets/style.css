@@ -1,0 +1,357 @@
+body{
+    margin:0;
+    padding:0;
+}
+#nav-bar{
+   background: transparent; 
+   height:100px;
+    width:100%;
+    top:0;
+    border:none;
+    position: absolute;
+    border-bottom:4px solid rgb(8, 135, 240);
+    z-index: 1;
+    font-size: 2em;
+    transition: 1.5s;
+    color:white;
+}
+strong{
+    display: none;
+}
+#mainappcontainer{
+    background-color: rgb(3, 82, 146);
+}
+#mainappcontainer a ,button{
+font-size:2em;
+font-weight: bold;
+color:rgb(8, 159, 247);
+border:2px solid rgb(117, 148, 173);
+text-decoration: none;
+padding: 10px;
+position: absolute;
+top:50%;
+left:40%;
+z-index: 1;
+}
+#mainappcontainer button{
+    margin-left:150px;
+    background: transparent;
+    cursor:pointer;
+}
+#mainappcontainer a:hover{
+    border:none;
+    background-color: rgb(3, 82, 146);
+    color:white;
+}
+#mainappcontainer button:hover{
+    border:none;
+    
+    background-color: rgb(3, 82, 146);
+    color:white;
+}
+#mainappcontainer a:hover ~ img{
+    filter: blur(10px);
+    transition: .5s;
+}
+#mainappcontainer a:hover ~ #nav-bar {
+color:white;
+font-size:2.5em;
+transition: 1.5s;
+background-color: rgb(3, 82, 146);
+border-bottom: 4px solid rgb(248, 245, 245);
+}
+#mainappcontainer a:hover ~ #nav-bar  strong{
+    display: inline;
+    transition: 1.5;
+}
+#mainappcontainer button:hover ~ #nav-bar  strong{
+    display: inline;
+    transition: 1.5;
+}
+#mainappcontainer button:hover ~ #nav-bar{
+    color:white;
+    font-size:2.5em;
+    transition: 1.5s;
+    background-color: rgb(3, 82, 146);
+    border-bottom: 4px solid rgb(248, 245, 245);}
+#mainappcontainer button:hover ~ img{
+    filter: blur(10px);
+    transition: .5s;
+}
+#welcome{
+    position: absolute;
+    top:90%;
+    font-family: Verdana;
+    left:60%;   
+    font-size: 1.5em; 
+    width:500px;
+    color:white;
+    padding:10px;
+    background: linear-gradient(rgb(180, 206, 216) ,rgb(124, 124, 124))
+}
+#welcome:first-letter{
+color:rgb(3, 82, 146);
+    font-size: 1.5em;
+
+}
+#slogan{
+    letter-spacing: 5px;   
+    position: absolute;
+    top:130%;
+    font-family: Verdana;
+    left:30%;   
+    font-size: 2em; 
+    font-weight: bolder;
+    width:600px;
+    color:white;
+    padding:10px;
+}
+#slogan::first-letter{
+    font-size:1.5em;
+}
+#welcome-select ,#welcome-login{
+    position: absolute;
+    top:90%;
+    font-family: Verdana;
+     
+    font-size: 1.5em; 
+    width:500px;
+    color:white;
+    padding:10px;
+    background: linear-gradient(rgb(180, 206, 216) ,rgb(124, 124, 124))
+}
+#welcome-select:first-letter{
+color:rgb(92, 92, 92);
+    font-size: 1.5em;
+}
+#login-admin{
+    position: absolute;
+    top:50%;
+    left:25%;
+    font-size:2em;
+}
+#login-admin{
+    border:none;
+    color:rgb(180, 206, 216);
+    width:600px;
+    font-weight: bolder;
+    padding:8px;
+    background:rgb(3, 82, 146) ;}
+#login-admin input[type=text],[type=password] ,[type=submit]{
+    font-size:1em;
+    margin-top:9px;
+    text-align: center;
+    color:rgb(3, 82, 146);
+}
+#login-admin input[type=password]{
+    margin:9px;
+}
+#login-admin input[type=submit]
+{
+    border:1px solid white;
+    cursor:pointer;
+    color:rgb(180, 206, 216);
+    background-color: transparent;
+    font-weight: bolder;
+    transition: .5s;
+}
+#login-admin [type=submit]:hover{
+    border:none;
+    color:rgb(3, 82, 146) ;
+    font-weight: bolder;
+    background-color:rgb(180, 206, 216);
+}
+#welcome-login{
+left:30%;
+}
+
+#logout input[type=submit]{
+    float:right;
+    bordeR:none;
+    padding:5px;
+    margin:5px;
+    font-size: 1.5em;
+    cursor:pointer;
+    font-size:19px;
+    font-weight: bolder;
+    transition: .5s;
+}
+#logout input[type=submit]:hover{
+ 
+    background-color: transparent;
+    color:red;
+    border:1px solid white;
+}
+#a1,#a2{
+    text-decoration: none;
+    margin:20px;
+    float:left;
+    font-size:19px;
+    z-index: -1;
+    color:white;
+}
+#a1:hover{
+    border:1px solid white;
+    padding:3px;
+}
+#a2:hover{
+    padding:3px;
+    border:1px solid white;
+}
+#detail-table table{
+    position: absolute;
+    top:30%;
+    left:30%;
+    font-size:1.5em;
+}
+#detail-table table{
+border-collapse: collapse;
+
+}
+#detail-table table th{
+    background-color: gray;
+    color:white;
+    padding:10px;
+    margin:0;
+}
+#detail-table table td{
+    padding:10px;
+    text-align: center;
+}
+#detail-table table tr{
+    text-decoration: none;
+    
+    background-color: rgb(1, 49, 207);
+    color:white;
+    transition: .5s;
+}
+#detail-table table tr:hover{
+    background-color: transparent;
+}
+#detail-table table a{
+    color:white;
+    text-decoration: none;
+}
+#detail-table table tr:nth-child(even)
+{
+    background-color: rgb(59, 59, 71);
+    
+    transition: .5s;
+}
+
+#detail-table table tr:nth-child(even):hover{
+    
+    background-color: transparent;
+}
+#detail-table table a:hover{
+    color:red;
+}
+#add-form {
+position: absolute;
+top:50%;
+left:30%;
+border:2px dotted white;
+padding:40px 40px 10px 40px ;
+font-weight: bolder;
+}
+#add-form input[type=text],[type=number]
+{  
+    float:right;
+    text-align: center;
+    color:rgb(3, 82, 146);
+}
+#add-form label{
+    color:white;
+}
+#add-form p{
+    font-size:1.5em;
+}
+#add-form input[type=text],[type=number],label{
+   
+    font-size:1em;
+}
+
+#add-form input[type=submit]
+{
+    border:1px solid white;
+    cursor:pointer;
+    color:rgb(180, 206, 216);
+    background-color: transparent;
+    font-weight: bolder;
+    transition: .5s;
+    float:right;
+}
+
+#add-form input[type=submit]:hover{
+    padding:5px;
+    color:blue;
+    transition:.5s;
+}
+select{
+    font-size:1em;
+    margin-top:9px;
+    text-align: center;
+    padding:9px;
+    color:rgb(3, 82, 146);
+}
+#add-form2
+{
+position: absolute;
+top:70%;
+left:25%;
+border:3px dotted white;
+padding:40px 40px 10px 40px ;
+font-weight: bolder;
+width:600px;
+
+}
+#add-form2 input[type=text],[type=number]
+{
+
+    font-size:1em;
+    margin-top:9px;
+    text-align: center;
+    padding:9px;
+    color:rgb(3, 82, 146);
+}
+#add-form2 input[type=submit]
+{
+    
+    border:1px solid white;
+    cursor:pointer;
+    color:rgb(180, 206, 216);
+    background-color: transparent;
+    font-weight: bolder;
+    transition: .5s;
+    float:right;
+}
+
+#add-form3
+{
+background-color: rgb(22, 87, 207);
+opacity: .7;
+position: absolute;
+top:70%;
+left:25%;
+border:3px dotted white;
+padding:40px 40px 10px 40px ;
+font-weight: bolder;
+color:white;
+}
+#add-form3 label{
+font-size:1.5;
+}
+#add-form3 input[type=text],[type=password]
+{
+    font-size:1em;
+   text-align: center;
+    padding:9px;
+    color:rgb(3, 82, 146);
+}
+#add-form3 input[type=submit]
+{
+float:right;
+}
+.helptext {
+display: none;
+}

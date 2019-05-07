@@ -1,0 +1,33 @@
+{% extends 'page1.html' %}
+{% block start %}
+
+<div id=mainappcontainer>
+        <div id=nav-bar>
+                <center> <h3>  <strong>"</strong> Welcome To Your Pharmacy  <strong>"</strong> 
+                    </h3></center>
+                </div>
+       
+        <div id=detail-table>
+                <img src="/usman_static/images2.jpg" alt="medicine-background" height=100% width=100%>
+
+<table>
+<tr>   
+        <th>Comapny</th>
+        <th>Medicine</th>
+        <th>Price</th>
+        <th>Quantity</th>
+</tr>
+     
+    <tr>
+            <td> {{ context.name }}</td>
+            <td>{{ context.medi }}</td>
+            <td>{{context.qty}}</td>
+            <td>{{ context.price }}</td>
+        </tr>
+        
+</table>
+</div>
+
+<a href="/customers/{{context.name}}/{{ context.medi }}/{{context.qty}}/{{ context.price }}" style='color:white; border:2px solid white;'>Confirm</a>
+
+{% endblock %}
